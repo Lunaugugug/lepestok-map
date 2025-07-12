@@ -1,1 +1,108 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Слои</title></head><body style='color:white;background:#000;'><h2>Слои реальности будут здесь</h2></body></html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Слои реальности — Последний лепесток</title>
+    <style>
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at center, #0a0a2a 0%, #000000 100%);
+            font-family: Georgia, serif;
+            color: white;
+            overflow: hidden;
+        }
+        .layer {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+            box-sizing: border-box;
+            animation: pulse 12s infinite ease-in-out;
+        }
+        .label {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #ddd;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .entity {
+            position: absolute;
+            opacity: 0.3;
+        }
+        .entity:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        .entity img {
+            width: 80px;
+            height: auto;
+            filter: drop-shadow(0 0 8px white);
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            white-space: nowrap;
+            display: none;
+        }
+        .entity:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="layer" style="width: 700px; height: 700px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+        <div class="label">Небытие</div>
+    </div>
+    <div class="layer" style="width: 600px; height: 600px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: #ccc;">
+        <div class="label">Тьма</div>
+    </div>
+    <div class="layer" style="width: 500px; height: 500px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: #aaa;">
+        <div class="label">Судьба / Время</div>
+    </div>
+    <div class="layer" style="width: 400px; height: 400px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: #77ffff;">
+        <div class="label">Пространство</div>
+    </div>
+    <div class="layer" style="width: 300px; height: 300px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: #ff6666;">
+        <div class="label">Межпространство</div>
+    </div>
+    <div class="layer" style="width: 200px; height: 200px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: #ffeb70;">
+        <div class="label">Коридор</div>
+    </div>
+    <div class="layer" style="width: 120px; height: 120px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: #75aaff;">
+        <div class="label">Внешние миры</div>
+    </div>
+    <div class="layer" style="width: 70px; height: 70px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-color: #dddddd;">
+        <div class="label">Загробный мир</div>
+    </div>
+
+    <!-- Сущности -->
+    <div class="entity" style="top: 18%; left: 20%;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Human_pictogram.svg" alt="Тьма">
+        <div class="tooltip">Тьма: «Я не противоположность света. Я его очертание.»</div>
+    </div>
+    <div class="entity" style="top: 30%; left: 60%;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Female_Silhouette.svg" alt="Время">
+        <div class="tooltip">Время: «Я пишу, даже когда никто не читает.»</div>
+    </div>
+    <div class="entity" style="top: 50%; left: 70%;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Dragon_silhouette.svg" alt="Пространство">
+        <div class="tooltip">Пространство: «Я граница, которую ты не замечаешь.»</div>
+    </div>
+    <div class="entity" style="top: 60%; left: 30%;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Star_silhouette.svg" alt="Судьба">
+        <div class="tooltip">Судьба: «Ты думаешь, что всё случайно. А я просто молчу.»</div>
+    </div>
+</body>
+</html>

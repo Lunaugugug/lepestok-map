@@ -1,1 +1,59 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><title>События</title></head><body style='color:white;background:#111;'><h2>Карта событий будет здесь</h2></body></html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карта событий — Последний Лепесток</title>
+    <style>
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at center, #0a0a2a, #000000);
+            font-family: Georgia, serif;
+            color: white;
+            overflow: hidden;
+        }
+        .map {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .planet, .character {
+            position: absolute;
+            text-align: center;
+            font-size: 12px;
+        }
+        .planet div, .character div {
+            background: rgba(0,0,0,0.6);
+            padding: 5px 10px;
+            border-radius: 8px;
+            margin-top: 5px;
+        }
+        .planet:hover div, .character:hover div {
+            background: rgba(255,255,255,0.8);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <div class="planet" style="top: 10%; left: 60%;">
+            <div>Неера<br><i>Совет Магов</i></div>
+        </div>
+        <div class="planet" style="top: 30%; left: 65%;">
+            <div>Мусорная планета 1<br><i>Луна, Призрак, Рамоналаздартха</i></div>
+        </div>
+        <div class="planet" style="top: 60%; left: 55%;">
+            <div>Гавань<br><i>Герб: чёрный дракон на зелёном</i></div>
+        </div>
+        <div class="planet" style="top: 65%; left: 25%;">
+            <div>Золотая Долина<br><i>Ли, Вей, Паук</i></div>
+        </div>
+        <div class="planet" style="top: 40%; left: 35%;">
+            <div>Кристальная Империя</div>
+        </div>
+        <div class="planet" style="top: 15%; left: 30%;">
+            <div>Мусорная планета 2</div>
+        </div>
+    </div>
+</body>
+</html>
